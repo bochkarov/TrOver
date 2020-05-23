@@ -12,15 +12,13 @@ class MainViewController: UIViewController {
     
     let topStackView = TopNavigationStackView()
     let blueView = UIView()
-    let yellowView = UIView()
+    let yellowView = PlayerStackView()
     let buttonsStackView = HomeBottomControlsStackView()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
         blueView.backgroundColor = .blue
-        yellowView.backgroundColor = .yellow
-        yellowView.heightAnchor.constraint(equalToConstant: 200).isActive = true
         setupLayout()
     }
     

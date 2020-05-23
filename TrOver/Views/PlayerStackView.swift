@@ -19,7 +19,12 @@ class PlayerStackView: UIStackView {
 
     override init(frame: CGRect) {
         super.init(frame: frame)
+        distribution = .fillEqually
+        
+        heightAnchor.constraint(equalToConstant: 120).isActive = true
+        
         setupElements()
+        setupConstraints()
         
     }
     
@@ -33,12 +38,12 @@ class PlayerStackView: UIStackView {
 extension PlayerStackView {
     
     func setupElements() {
-        artistNameLabel.font = UIFont(name: "Teko", size: 17)
+        artistNameLabel.font = UIFont(name: "Teko-Regular", size: 17)
         artistNameLabel.textAlignment = .center
         artistNameLabel.textColor = #colorLiteral(red: 0.7058823529, green: 0.1176470588, blue: 0.1176470588, alpha: 1)
         artistNameLabel.text = "David Penn"
         
-        trackNameLabel.font = UIFont(name: "Montserrat", size: 26)
+        trackNameLabel.font = UIFont(name: "Montserrat-Medium", size: 26)
         trackNameLabel.textAlignment = .center
         trackNameLabel.textColor = #colorLiteral(red: 0.2, green: 0.2, blue: 0.2, alpha: 1)
         trackNameLabel.text = "House Masters"
@@ -52,8 +57,8 @@ extension PlayerStackView {
         timeLeftLabel.textColor = #colorLiteral(red: 0.5647058824, green: 0.5647058824, blue: 0.5647058824, alpha: 1)
         timeLeftLabel.text = "--:--"
         
-        playlistsButton.setImage(#imageLiteral(resourceName: "Playlists"), for: .normal)
-        shareButton.setImage(#imageLiteral(resourceName: "Share"), for: .normal)
+        playlistsButton.setImage(#imageLiteral(resourceName: "Playlists").withRenderingMode(.alwaysOriginal), for: .normal)
+        shareButton.setImage(#imageLiteral(resourceName: "Share").withRenderingMode(.alwaysOriginal), for: .normal)
         
         slider.setThumbImage(#imageLiteral(resourceName: "SliderThumbImage"), for: .normal)
         slider.minimumTrackTintColor = #colorLiteral(red: 0.2, green: 0.2, blue: 0.2, alpha: 1)
@@ -67,6 +72,39 @@ extension PlayerStackView {
         let trackInfoStackView = UIStackView(arrangedSubviews: [artistNameLabel, trackNameLabel])
         trackInfoStackView.axis = .vertical
         trackInfoStackView.spacing = 4
+        trackInfoStackView.translatesAutoresizingMaskIntoConstraints = false
+        
+        let labelsStackView = UIStackView(arrangedSubviews: [currentSecondsLabel, timeLeftLabel])
+        labelsStackView.axis = .horizontal
+        labelsStackView.spacing = 0
+        
+        let topSliderStackView = UIStackView(arrangedSubviews: [slider, labelsStackView])
+        topSliderStackView.axis = .vertical
+        topSliderStackView.spacing = 4
+        
+        let playerStackView = UIStackView(arrangedSubviews: [playlistsButton, topSliderStackView, shareButton])
+        playerStackView.axis = .horizontal
+        playerStackView.spacing = 16
+        playerStackView.translatesAutoresizingMaskIntoConstraints = false
+        
+        addSubview(trackInfoStackView)
+        addSubview(playerStackView)
+        
+        NSLayoutConstraint.activate([
+             trackInfoStackView.topAnchor.constraint(equalTo: topAnchor, constant: 8),
+             trackInfoStackView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 24),
+             trackInfoStackView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -24)
+         ])
+        
+        playlistsButton.heightAnchor.constraint(equalToConstant: 24).isActive = true
+        playlistsButton.widthAnchor.constraint(equalToConstant: 24).isActive = true
+        playlistsButton.heightAnchor.constraint(equalToConstant: 24).isActive = true
+        playlistsButton.widthAnchor.constraint(equalToConstant: 24).isActive = true
+        NSLayoutConstraint.activate([
+            playerStackView.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -8),
+            playerStackView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 24),
+            playerStackView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -24),
+        ])
         
         
     }

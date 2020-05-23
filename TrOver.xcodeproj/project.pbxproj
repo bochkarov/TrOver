@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BE3E5A4E2479B89500AC9A16 /* Montserrat-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BE3E5A4C2479B86500AC9A16 /* Montserrat-Regular.ttf */; };
+		BE3E5A512479B98A00AC9A16 /* Montserrat-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BE3E5A502479B98A00AC9A16 /* Montserrat-Medium.ttf */; };
+		BE3E5A532479BA6900AC9A16 /* Teko-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BE3E5A522479BA6900AC9A16 /* Teko-Regular.ttf */; };
 		BE82E30524783B7B00C26FA9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE82E30424783B7B00C26FA9 /* AppDelegate.swift */; };
 		BE82E30724783B7B00C26FA9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE82E30624783B7B00C26FA9 /* SceneDelegate.swift */; };
 		BE82E30924783B7B00C26FA9 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE82E30824783B7B00C26FA9 /* MainViewController.swift */; };
@@ -20,6 +23,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BE3E5A4C2479B86500AC9A16 /* Montserrat-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Regular.ttf"; sourceTree = "<group>"; };
+		BE3E5A502479B98A00AC9A16 /* Montserrat-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Medium.ttf"; sourceTree = "<group>"; };
+		BE3E5A522479BA6900AC9A16 /* Teko-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Teko-Regular.ttf"; sourceTree = "<group>"; };
 		BE82E30124783B7B00C26FA9 /* TrOver.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TrOver.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE82E30424783B7B00C26FA9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BE82E30624783B7B00C26FA9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -45,6 +51,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BE3E5A4B2479B83F00AC9A16 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				BE3E5A4C2479B86500AC9A16 /* Montserrat-Regular.ttf */,
+				BE3E5A502479B98A00AC9A16 /* Montserrat-Medium.ttf */,
+				BE3E5A522479BA6900AC9A16 /* Teko-Regular.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
 		BE82E2F824783B7B00C26FA9 = {
 			isa = PBXGroup;
 			children = (
@@ -73,6 +89,7 @@
 				BE82E31224783B7D00C26FA9 /* LaunchScreen.storyboard */,
 				BE82E31524783B7D00C26FA9 /* Info.plist */,
 				BE82E30D24783B7B00C26FA9 /* TrOver.xcdatamodeld */,
+				BE3E5A4B2479B83F00AC9A16 /* Fonts */,
 			);
 			path = TrOver;
 			sourceTree = "<group>";
@@ -145,6 +162,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BE3E5A532479BA6900AC9A16 /* Teko-Regular.ttf in Resources */,
+				BE3E5A4E2479B89500AC9A16 /* Montserrat-Regular.ttf in Resources */,
+				BE3E5A512479B98A00AC9A16 /* Montserrat-Medium.ttf in Resources */,
 				BE82E31424783B7D00C26FA9 /* LaunchScreen.storyboard in Resources */,
 				BE82E31124783B7D00C26FA9 /* Assets.xcassets in Resources */,
 				BE82E30C24783B7B00C26FA9 /* Main.storyboard in Resources */,

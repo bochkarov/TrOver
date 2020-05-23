@@ -12,16 +12,25 @@ class HomeBottomControlsStackView: UIStackView {
     override init(frame: CGRect) {
         super.init(frame: frame)
         distribution = .fillEqually
-        heightAnchor.constraint(equalToConstant: 180).isActive = true
+        heightAnchor.constraint(equalToConstant: 130).isActive = true
         
         let subviews = [#imageLiteral(resourceName: "Like"), #imageLiteral(resourceName: "Dislike")].map { (img) -> UIView in
             let button = UIButton(type: .system)
             button.setImage(img.withRenderingMode(.alwaysOriginal), for: .normal)
+            button.translatesAutoresizingMaskIntoConstraints = true
+            
+            button.widthAnchor.constraint(equalToConstant: 82).isActive = true
+        
+            button.heightAnchor.constraint(equalToConstant: 83).isActive = true
+        
             return button
         }
                 
         subviews.forEach { (v) in
             addArrangedSubview(v)
+            isLayoutMarginsRelativeArrangement = true
+                layoutMargins = .init(top: 0, left: 24, bottom: 0, right: 24)
+            
         }
     }
     
