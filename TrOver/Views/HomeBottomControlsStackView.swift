@@ -19,9 +19,9 @@ class HomeBottomControlsStackView: UIStackView {
             button.setImage(img.withRenderingMode(.alwaysOriginal), for: .normal)
             button.translatesAutoresizingMaskIntoConstraints = true
             
-            button.widthAnchor.constraint(equalToConstant: 82).isActive = true
-        
-            button.heightAnchor.constraint(equalToConstant: 83).isActive = true
+//            button.widthAnchor.constraint(equalToConstant: 82).isActive = true
+//        
+//            button.heightAnchor.constraint(equalToConstant: 83).isActive = true
         
             return button
         }

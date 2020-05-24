@@ -14,9 +14,11 @@ class PlayerStackView: UIStackView {
     let slider = UISlider()
     let currentSecondsLabel = UILabel()
     let timeLeftLabel = UILabel()
+    let leftPlayerTopEmptyLabel = UILabel()
+    let rightPlayerTopEmptyLable = UILabel()
     let playlistsButton = UIButton(type: .system)
     let shareButton = UIButton(type: .system)
-
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         distribution = .fillEqually
@@ -41,18 +43,18 @@ extension PlayerStackView {
         artistNameLabel.font = UIFont(name: "Teko-Regular", size: 17)
         artistNameLabel.textAlignment = .center
         artistNameLabel.textColor = #colorLiteral(red: 0.7058823529, green: 0.1176470588, blue: 0.1176470588, alpha: 1)
-        artistNameLabel.text = "David Penn"
+        artistNameLabel.text = "ZHU"
         
         trackNameLabel.font = UIFont(name: "Montserrat-Medium", size: 26)
         trackNameLabel.textAlignment = .center
         trackNameLabel.textColor = #colorLiteral(red: 0.2, green: 0.2, blue: 0.2, alpha: 1)
-        trackNameLabel.text = "House Masters"
+        trackNameLabel.text = "In the Morning"
         
-        currentSecondsLabel.font = UIFont(name: "Teko", size: 14)
+        currentSecondsLabel.font = UIFont(name: "Teko-Regular", size: 14)
         currentSecondsLabel.textColor = #colorLiteral(red: 0.5647058824, green: 0.5647058824, blue: 0.5647058824, alpha: 1)
         currentSecondsLabel.text = "00:00"
         
-        timeLeftLabel.font = UIFont(name: "Teko", size: 14)
+        timeLeftLabel.font = UIFont(name: "Teko-Regular", size: 14)
         timeLeftLabel.textAlignment = .right
         timeLeftLabel.textColor = #colorLiteral(red: 0.5647058824, green: 0.5647058824, blue: 0.5647058824, alpha: 1)
         timeLeftLabel.text = "--:--"
@@ -91,10 +93,10 @@ extension PlayerStackView {
         addSubview(playerStackView)
         
         NSLayoutConstraint.activate([
-             trackInfoStackView.topAnchor.constraint(equalTo: topAnchor, constant: 8),
-             trackInfoStackView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 24),
-             trackInfoStackView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -24)
-         ])
+            trackInfoStackView.topAnchor.constraint(equalTo: topAnchor, constant: 8),
+            trackInfoStackView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 24),
+            trackInfoStackView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -24)
+        ])
         
         playlistsButton.heightAnchor.constraint(equalToConstant: 24).isActive = true
         playlistsButton.widthAnchor.constraint(equalToConstant: 24).isActive = true
@@ -105,7 +107,5 @@ extension PlayerStackView {
             playerStackView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 24),
             playerStackView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -24),
         ])
-        
-        
     }
 }

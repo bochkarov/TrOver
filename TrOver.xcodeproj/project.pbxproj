@@ -20,6 +20,8 @@
 		BE82E31D2478515900C26FA9 /* HomeBottomControlsStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE82E31C2478515900C26FA9 /* HomeBottomControlsStackView.swift */; };
 		BE82E31F247857D500C26FA9 /* TopNavigationStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE82E31E247857D500C26FA9 /* TopNavigationStackView.swift */; };
 		BE82E32124786BA400C26FA9 /* PlayerStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE82E32024786BA400C26FA9 /* PlayerStackView.swift */; };
+		BEB65E55247AF6990093BEC8 /* Extensions+UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEB65E54247AF6990093BEC8 /* Extensions+UIView.swift */; };
+		BEE06552247A82CA00902F19 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEE06551247A82CA00902F19 /* CardView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +40,8 @@
 		BE82E31C2478515900C26FA9 /* HomeBottomControlsStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeBottomControlsStackView.swift; sourceTree = "<group>"; };
 		BE82E31E247857D500C26FA9 /* TopNavigationStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopNavigationStackView.swift; sourceTree = "<group>"; };
 		BE82E32024786BA400C26FA9 /* PlayerStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerStackView.swift; sourceTree = "<group>"; };
+		BEB65E54247AF6990093BEC8 /* Extensions+UIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Extensions+UIView.swift"; sourceTree = "<group>"; };
+		BEE06551247A82CA00902F19 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +89,7 @@
 				BE82E30624783B7B00C26FA9 /* SceneDelegate.swift */,
 				BE82E30824783B7B00C26FA9 /* MainViewController.swift */,
 				BE82E30A24783B7B00C26FA9 /* Main.storyboard */,
+				BEB65E53247AF6810093BEC8 /* Extensions */,
 				BE82E31024783B7D00C26FA9 /* Assets.xcassets */,
 				BE82E31224783B7D00C26FA9 /* LaunchScreen.storyboard */,
 				BE82E31524783B7D00C26FA9 /* Info.plist */,
@@ -99,9 +104,18 @@
 			children = (
 				BE82E31E247857D500C26FA9 /* TopNavigationStackView.swift */,
 				BE82E32024786BA400C26FA9 /* PlayerStackView.swift */,
+				BEE06551247A82CA00902F19 /* CardView.swift */,
 				BE82E31C2478515900C26FA9 /* HomeBottomControlsStackView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		BEB65E53247AF6810093BEC8 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				BEB65E54247AF6990093BEC8 /* Extensions+UIView.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -180,10 +194,12 @@
 			files = (
 				BE82E30924783B7B00C26FA9 /* MainViewController.swift in Sources */,
 				BE82E30F24783B7B00C26FA9 /* TrOver.xcdatamodeld in Sources */,
+				BEB65E55247AF6990093BEC8 /* Extensions+UIView.swift in Sources */,
 				BE82E31D2478515900C26FA9 /* HomeBottomControlsStackView.swift in Sources */,
 				BE82E31F247857D500C26FA9 /* TopNavigationStackView.swift in Sources */,
 				BE82E30524783B7B00C26FA9 /* AppDelegate.swift in Sources */,
 				BE82E32124786BA400C26FA9 /* PlayerStackView.swift in Sources */,
+				BEE06552247A82CA00902F19 /* CardView.swift in Sources */,
 				BE82E30724783B7B00C26FA9 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
