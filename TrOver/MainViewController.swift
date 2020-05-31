@@ -49,7 +49,7 @@ class MainViewController: UIViewController {
         overallStackView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor).isActive = true
         overallStackView.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
         overallStackView.isLayoutMarginsRelativeArrangement = true
-        overallStackView.layoutMargins = .init(top: 0, left: 8, bottom: 0, right: 8)
+        overallStackView.layoutMargins = .init(top: 0, left: 8, bottom: 8, right: 8)
         
         overallStackView.bringSubviewToFront(cardsDeckView)
     }

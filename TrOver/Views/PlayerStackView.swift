@@ -9,8 +9,6 @@
 import UIKit
 
 class PlayerStackView: UIStackView {
-    let artistNameLabel = UILabel()
-    let trackNameLabel = UILabel()
     let slider = UISlider()
     let currentSecondsLabel = UILabel()
     let timeLeftLabel = UILabel()
@@ -22,33 +20,20 @@ class PlayerStackView: UIStackView {
     override init(frame: CGRect) {
         super.init(frame: frame)
         distribution = .fillEqually
-        
         heightAnchor.constraint(equalToConstant: 120).isActive = true
-        
         setupElements()
         setupConstraints()
-        
     }
     
     required init(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
 }
 
 // MARK: - Setup StackView
 extension PlayerStackView {
     
     func setupElements() {
-        artistNameLabel.font = UIFont(name: "Teko-Regular", size: 17)
-        artistNameLabel.textAlignment = .center
-        artistNameLabel.textColor = #colorLiteral(red: 0.7058823529, green: 0.1176470588, blue: 0.1176470588, alpha: 1)
-        artistNameLabel.text = "ZHU"
-        
-        trackNameLabel.font = UIFont(name: "Montserrat-Medium", size: 26)
-        trackNameLabel.textAlignment = .center
-        trackNameLabel.textColor = #colorLiteral(red: 0.2, green: 0.2, blue: 0.2, alpha: 1)
-        trackNameLabel.text = "In the Morning"
         
         currentSecondsLabel.font = UIFont(name: "Teko-Regular", size: 14)
         currentSecondsLabel.textColor = #colorLiteral(red: 0.5647058824, green: 0.5647058824, blue: 0.5647058824, alpha: 1)
@@ -71,11 +56,7 @@ extension PlayerStackView {
 // MARK: - Setup Constraints
 extension PlayerStackView {
     func setupConstraints() {
-        let trackInfoStackView = UIStackView(arrangedSubviews: [artistNameLabel, trackNameLabel])
-        trackInfoStackView.axis = .vertical
-        trackInfoStackView.spacing = 4
-        trackInfoStackView.translatesAutoresizingMaskIntoConstraints = false
-        
+     
         let labelsStackView = UIStackView(arrangedSubviews: [currentSecondsLabel, timeLeftLabel])
         labelsStackView.axis = .horizontal
         labelsStackView.spacing = 0
@@ -89,14 +70,10 @@ extension PlayerStackView {
         playerStackView.spacing = 16
         playerStackView.translatesAutoresizingMaskIntoConstraints = false
         
-        addSubview(trackInfoStackView)
+      
         addSubview(playerStackView)
         
-        NSLayoutConstraint.activate([
-            trackInfoStackView.topAnchor.constraint(equalTo: topAnchor, constant: 8),
-            trackInfoStackView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 24),
-            trackInfoStackView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -24)
-        ])
+
         
         playlistsButton.heightAnchor.constraint(equalToConstant: 24).isActive = true
         playlistsButton.widthAnchor.constraint(equalToConstant: 24).isActive = true

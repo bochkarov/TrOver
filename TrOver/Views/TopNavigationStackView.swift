@@ -15,7 +15,8 @@ class TopNavigationStackView: UIStackView {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        heightAnchor.constraint(equalToConstant: 60).isActive = true
+
+//        heightAnchor.constraint(equalToConstant: 60).isActive = true
         distribution = .equalCentering
         logoImage.contentMode = .center
         settingsButtons.setImage(#imageLiteral(resourceName: "Settings").withRenderingMode(.alwaysOriginal), for: .normal)
