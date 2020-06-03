@@ -8,13 +8,18 @@
 
 import UIKit
 
-class MainViewController: UIViewController {
+class HomeController: UIViewController {
     
     let topStackView = TopNavigationStackView()
     let cardsDeckView = UIView()
     let playerStackView = PlayerStackView()
     let buttonsStackView = HomeBottomControlsStackView()
-
+    
+    let tracks = [
+        Track(artistName: "ZHU", trackName: "In the Morning", imageName: "zhu"),
+        Track(artistName: "Валик Индиго", trackName: "ЧП Любви", imageName: "ndgo")
+    ]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupLayout()
@@ -22,15 +27,19 @@ class MainViewController: UIViewController {
     }
     
     fileprivate func setupDummyCards() {
-        print("Setting up dummy cards")
-        let cardView = CardView(frame: .zero)
-        cardsDeckView.addSubview(cardView)
-        cardView.translatesAutoresizingMaskIntoConstraints = false
-        cardView.heightAnchor.constraint(equalTo: topStackView.widthAnchor).isActive = true
-        cardView.topAnchor.constraint(equalTo: topStackView.bottomAnchor).isActive = true
-        cardView.leadingAnchor.constraint(equalTo: cardsDeckView.leadingAnchor).isActive = true
-        cardView.bottomAnchor.constraint(equalTo: playerStackView.topAnchor).isActive = true
-           cardView.trailingAnchor.constraint(equalTo: cardsDeckView.trailingAnchor).isActive = true
+        tracks.forEach { (track) in
+            let cardView = CardView(frame: .zero)
+            cardView.imageView.image = UIImage(named: track.imageName)
+            cardView.artistNameLabel.text = track.artistName
+            cardView.trackNameLabel.text = track.trackName
+            cardsDeckView.addSubview(cardView)
+            cardView.translatesAutoresizingMaskIntoConstraints = false
+            cardView.heightAnchor.constraint(equalTo: topStackView.widthAnchor).isActive = true
+            cardView.topAnchor.constraint(equalTo: topStackView.bottomAnchor).isActive = true
+            cardView.leadingAnchor.constraint(equalTo: cardsDeckView.leadingAnchor).isActive = true
+            cardView.bottomAnchor.constraint(equalTo: playerStackView.topAnchor).isActive = true
+            cardView.trailingAnchor.constraint(equalTo: cardsDeckView.trailingAnchor).isActive = true
+        } 
     }
     
     

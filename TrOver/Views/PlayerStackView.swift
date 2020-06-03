@@ -20,7 +20,7 @@ class PlayerStackView: UIStackView {
     override init(frame: CGRect) {
         super.init(frame: frame)
         distribution = .fillEqually
-        heightAnchor.constraint(equalToConstant: 120).isActive = true
+        heightAnchor.constraint(equalToConstant: 130).isActive = true
         setupElements()
         setupConstraints()
     }

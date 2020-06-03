@@ -10,13 +10,14 @@ import UIKit
 
 class CardView: UIView {
     
-    fileprivate let imageView = UIImageView(image: #imageLiteral(resourceName: "zhu"))
-    fileprivate let artistNameLabel = UILabel()
-    fileprivate let trackNameLabel = UILabel()
+    let imageView = UIImageView(image: #imageLiteral(resourceName: "zhu"))
+    let artistNameLabel = UILabel()
+    let trackNameLabel = UILabel()
     fileprivate let threshold: CGFloat = 100
     
     override init(frame: CGRect) {
         super.init(frame: frame)
+        backgroundColor = .systemBackground
         setupElements()
         setupConstraints()
         let panGesture = UIPanGestureRecognizer(target: self, action: #selector(handlePan))
@@ -51,7 +52,7 @@ class CardView: UIView {
         let translationDirection: CGFloat = gesture.translation(in: nil).x > 0 ? 1 : -1
         let shouldDismissCard = abs(gesture.translation(in: nil).x) > threshold
         
-        UIView.animate(withDuration: 0.75,
+        UIView.animate(withDuration: 1,
                        delay: 0,
                        usingSpringWithDamping: 0.6,
                        initialSpringVelocity: 0.1,
@@ -62,16 +63,20 @@ class CardView: UIView {
     //                                                y: 0,
     //                                                width: self.frame.width,
     //                                                height: self.frame.height)
-                            self.center = CGPoint(x: 1000 * translationDirection, y: 0)
+                            self.center = CGPoint(x: 600 * translationDirection, y: 0)
                         } else {
                             self.transform = .identity
                         }
         }) { (_) in
             self.transform = .identity
-            self.frame = CGRect(x: 0,
-                                y: 0,
-                                width: self.superview!.frame.width,
-                                height: self.superview!.frame.height)
+            if shouldDismissCard {
+                self.removeFromSuperview()
+            }
+            
+//            self.frame = CGRect(x: 0,
+//                                y: 0,
+//                                width: self.superview!.frame.width,
+//                                height: self.superview!.frame.height)
         }
     }
     required init?(coder: NSCoder) {
@@ -83,6 +88,7 @@ extension CardView {
     func setupElements() {
         imageView.layer.cornerRadius = 10
         imageView.clipsToBounds = true
+        imageView.contentMode = .scaleAspectFill
         
         artistNameLabel.font = UIFont(name: "Teko-Regular", size: 17)
         artistNameLabel.textAlignment = .center

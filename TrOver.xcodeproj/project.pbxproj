@@ -7,12 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BE15C9C7248827FA00D5B46C /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE15C9C6248827FA00D5B46C /* NetworkService.swift */; };
+		BE15C9CA24882F6C00D5B46C /* AppleMusicManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE15C9C924882F6C00D5B46C /* AppleMusicManager.swift */; };
+		BE15C9CC2488342800D5B46C /* MediaItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE15C9CB2488342800D5B46C /* MediaItem.swift */; };
+		BE15C9CE248836EF00D5B46C /* Track.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE15C9CD248836EF00D5B46C /* Track.swift */; };
+		BE15C9D024883C2200D5B46C /* SerializationError.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE15C9CF24883C2200D5B46C /* SerializationError.swift */; };
+		BE15C9D224883C9E00D5B46C /* Artwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE15C9D124883C9E00D5B46C /* Artwork.swift */; };
 		BE3E5A4E2479B89500AC9A16 /* Montserrat-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BE3E5A4C2479B86500AC9A16 /* Montserrat-Regular.ttf */; };
 		BE3E5A512479B98A00AC9A16 /* Montserrat-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BE3E5A502479B98A00AC9A16 /* Montserrat-Medium.ttf */; };
 		BE3E5A532479BA6900AC9A16 /* Teko-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BE3E5A522479BA6900AC9A16 /* Teko-Regular.ttf */; };
 		BE82E30524783B7B00C26FA9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE82E30424783B7B00C26FA9 /* AppDelegate.swift */; };
 		BE82E30724783B7B00C26FA9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE82E30624783B7B00C26FA9 /* SceneDelegate.swift */; };
-		BE82E30924783B7B00C26FA9 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE82E30824783B7B00C26FA9 /* MainViewController.swift */; };
+		BE82E30924783B7B00C26FA9 /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE82E30824783B7B00C26FA9 /* HomeController.swift */; };
 		BE82E30C24783B7B00C26FA9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE82E30A24783B7B00C26FA9 /* Main.storyboard */; };
 		BE82E30F24783B7B00C26FA9 /* TrOver.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BE82E30D24783B7B00C26FA9 /* TrOver.xcdatamodeld */; };
 		BE82E31124783B7D00C26FA9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BE82E31024783B7D00C26FA9 /* Assets.xcassets */; };
@@ -25,13 +31,19 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BE15C9C6248827FA00D5B46C /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		BE15C9C924882F6C00D5B46C /* AppleMusicManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleMusicManager.swift; sourceTree = "<group>"; };
+		BE15C9CB2488342800D5B46C /* MediaItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaItem.swift; sourceTree = "<group>"; };
+		BE15C9CD248836EF00D5B46C /* Track.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Track.swift; sourceTree = "<group>"; };
+		BE15C9CF24883C2200D5B46C /* SerializationError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SerializationError.swift; sourceTree = "<group>"; };
+		BE15C9D124883C9E00D5B46C /* Artwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Artwork.swift; sourceTree = "<group>"; };
 		BE3E5A4C2479B86500AC9A16 /* Montserrat-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Regular.ttf"; sourceTree = "<group>"; };
 		BE3E5A502479B98A00AC9A16 /* Montserrat-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Medium.ttf"; sourceTree = "<group>"; };
 		BE3E5A522479BA6900AC9A16 /* Teko-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Teko-Regular.ttf"; sourceTree = "<group>"; };
 		BE82E30124783B7B00C26FA9 /* TrOver.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TrOver.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE82E30424783B7B00C26FA9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BE82E30624783B7B00C26FA9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		BE82E30824783B7B00C26FA9 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		BE82E30824783B7B00C26FA9 /* HomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
 		BE82E30B24783B7B00C26FA9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BE82E30E24783B7B00C26FA9 /* TrOver.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TrOver.xcdatamodel; sourceTree = "<group>"; };
 		BE82E31024783B7D00C26FA9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -55,6 +67,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BE15C9C5248827BB00D5B46C /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				BE15C9C6248827FA00D5B46C /* NetworkService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		BE15C9C824882F2F00D5B46C /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				BE15C9C924882F6C00D5B46C /* AppleMusicManager.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
 		BE3E5A4B2479B83F00AC9A16 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
@@ -63,6 +91,17 @@
 				BE3E5A522479BA6900AC9A16 /* Teko-Regular.ttf */,
 			);
 			path = Fonts;
+			sourceTree = "<group>";
+		};
+		BE3F7B68248405F4000A0481 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				BE15C9CD248836EF00D5B46C /* Track.swift */,
+				BE15C9CB2488342800D5B46C /* MediaItem.swift */,
+				BE15C9D124883C9E00D5B46C /* Artwork.swift */,
+				BE15C9CF24883C2200D5B46C /* SerializationError.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		BE82E2F824783B7B00C26FA9 = {
@@ -84,11 +123,14 @@
 		BE82E30324783B7B00C26FA9 /* TrOver */ = {
 			isa = PBXGroup;
 			children = (
+				BE15C9C824882F2F00D5B46C /* Controllers */,
+				BE3F7B68248405F4000A0481 /* Model */,
 				BE82E31B247850EB00C26FA9 /* Views */,
 				BE82E30424783B7B00C26FA9 /* AppDelegate.swift */,
 				BE82E30624783B7B00C26FA9 /* SceneDelegate.swift */,
-				BE82E30824783B7B00C26FA9 /* MainViewController.swift */,
+				BE82E30824783B7B00C26FA9 /* HomeController.swift */,
 				BE82E30A24783B7B00C26FA9 /* Main.storyboard */,
+				BE15C9C5248827BB00D5B46C /* Services */,
 				BEB65E53247AF6810093BEC8 /* Extensions */,
 				BE82E31024783B7D00C26FA9 /* Assets.xcassets */,
 				BE82E31224783B7D00C26FA9 /* LaunchScreen.storyboard */,
@@ -192,13 +234,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BE82E30924783B7B00C26FA9 /* MainViewController.swift in Sources */,
+				BE15C9CC2488342800D5B46C /* MediaItem.swift in Sources */,
+				BE15C9C7248827FA00D5B46C /* NetworkService.swift in Sources */,
+				BE82E30924783B7B00C26FA9 /* HomeController.swift in Sources */,
 				BE82E30F24783B7B00C26FA9 /* TrOver.xcdatamodeld in Sources */,
 				BEB65E55247AF6990093BEC8 /* Extensions+UIView.swift in Sources */,
 				BE82E31D2478515900C26FA9 /* HomeBottomControlsStackView.swift in Sources */,
 				BE82E31F247857D500C26FA9 /* TopNavigationStackView.swift in Sources */,
 				BE82E30524783B7B00C26FA9 /* AppDelegate.swift in Sources */,
+				BE15C9CA24882F6C00D5B46C /* AppleMusicManager.swift in Sources */,
 				BE82E32124786BA400C26FA9 /* PlayerStackView.swift in Sources */,
+				BE15C9D224883C9E00D5B46C /* Artwork.swift in Sources */,
+				BE15C9CE248836EF00D5B46C /* Track.swift in Sources */,
+				BE15C9D024883C2200D5B46C /* SerializationError.swift in Sources */,
 				BEE06552247A82CA00902F19 /* CardView.swift in Sources */,
 				BE82E30724783B7B00C26FA9 /* SceneDelegate.swift in Sources */,
 			);

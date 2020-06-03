@@ -17,6 +17,7 @@ class TopNavigationStackView: UIStackView {
         super.init(frame: frame)
 
 //        heightAnchor.constraint(equalToConstant: 60).isActive = true
+//        topAnchor.constraint(equalTo: topAnchor, constant: 12).isActive = true
         distribution = .equalCentering
         logoImage.contentMode = .center
         settingsButtons.setImage(#imageLiteral(resourceName: "Settings").withRenderingMode(.alwaysOriginal), for: .normal)
@@ -25,7 +26,7 @@ class TopNavigationStackView: UIStackView {
             addArrangedSubview(v)
             
         isLayoutMarginsRelativeArrangement = true
-            layoutMargins = .init(top: 0, left: 32, bottom: 0, right: 32)
+            layoutMargins = .init(top: 12, left: 32, bottom: 0, right: 32)
         }
     }
 
