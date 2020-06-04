@@ -7,8 +7,31 @@
 //
 
 import UIKit
+import StoreKit
+@objcMembers
+
 
 class HomeController: UIViewController {
+    /// The instance of `AuthorizationManager` used for querying and requesting authorization status.
+    var authorizationManager: AuthorizationManager!
+    
+    /// The instance of `AppleMusicManager` which is used to make search request calls to the Apple Music Web Services.
+    let appleMusicManager = AppleMusicManager()
+    
+    /// The instance of `MediaLibraryManager` which is used for adding items to the application's playlist.
+    var mediaLibraryManager: MediaLibraryManager!
+    
+    /// A `DispatchQueue` used for synchornizing the setting of `mediaItems` to avoid threading issues with various `UITableView` delegate callbacks.
+    var setterQueue = DispatchQueue(label: "MediaSearchTableViewController")
+    
+    /// The array of `MediaItem` objects that represents the list of search results.
+    var mediaItems = [[MediaItem]]() {
+        didSet {
+            DispatchQueue.main.async {
+                self.tableView.reloadData()
+            }
+        }
+    }
     
     let topStackView = TopNavigationStackView()
     let cardsDeckView = UIView()
@@ -62,7 +85,11 @@ class HomeController: UIViewController {
         
         overallStackView.bringSubviewToFront(cardsDeckView)
     }
+}
+extension HomeController {
     
-    
+    func fetchDefaultRequest() {
+        
+    }
 }
 
