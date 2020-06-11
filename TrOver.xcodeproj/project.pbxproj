@@ -13,11 +13,14 @@
 		BE15C9CE248836EF00D5B46C /* Track.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE15C9CD248836EF00D5B46C /* Track.swift */; };
 		BE15C9D024883C2200D5B46C /* SerializationError.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE15C9CF24883C2200D5B46C /* SerializationError.swift */; };
 		BE15C9D224883C9E00D5B46C /* Artwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE15C9D124883C9E00D5B46C /* Artwork.swift */; };
+		BE3056C1248D54FB00AF45B7 /* JSONKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE3056C0248D54FB00AF45B7 /* JSONKeys.swift */; };
+		BE3056C3248D593C00AF45B7 /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE3056C2248D593C00AF45B7 /* AuthViewController.swift */; };
 		BE3E5A4E2479B89500AC9A16 /* Montserrat-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BE3E5A4C2479B86500AC9A16 /* Montserrat-Regular.ttf */; };
 		BE3E5A512479B98A00AC9A16 /* Montserrat-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BE3E5A502479B98A00AC9A16 /* Montserrat-Medium.ttf */; };
 		BE3E5A532479BA6900AC9A16 /* Teko-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BE3E5A522479BA6900AC9A16 /* Teko-Regular.ttf */; };
 		BE4B76C1248974530018E97F /* AppleMusicRequestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE4B76C0248974530018E97F /* AppleMusicRequestFactory.swift */; };
 		BE4B76C3248980750018E97F /* AuthorizationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE4B76C2248980750018E97F /* AuthorizationManager.swift */; };
+		BE5BC20B2492BF57004B29D1 /* SpotifyConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5BC20A2492BF57004B29D1 /* SpotifyConstants.swift */; };
 		BE82E30524783B7B00C26FA9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE82E30424783B7B00C26FA9 /* AppDelegate.swift */; };
 		BE82E30724783B7B00C26FA9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE82E30624783B7B00C26FA9 /* SceneDelegate.swift */; };
 		BE82E30924783B7B00C26FA9 /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE82E30824783B7B00C26FA9 /* HomeController.swift */; };
@@ -39,11 +42,14 @@
 		BE15C9CD248836EF00D5B46C /* Track.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Track.swift; sourceTree = "<group>"; };
 		BE15C9CF24883C2200D5B46C /* SerializationError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SerializationError.swift; sourceTree = "<group>"; };
 		BE15C9D124883C9E00D5B46C /* Artwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Artwork.swift; sourceTree = "<group>"; };
+		BE3056C0248D54FB00AF45B7 /* JSONKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONKeys.swift; sourceTree = "<group>"; };
+		BE3056C2248D593C00AF45B7 /* AuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
 		BE3E5A4C2479B86500AC9A16 /* Montserrat-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Regular.ttf"; sourceTree = "<group>"; };
 		BE3E5A502479B98A00AC9A16 /* Montserrat-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Medium.ttf"; sourceTree = "<group>"; };
 		BE3E5A522479BA6900AC9A16 /* Teko-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Teko-Regular.ttf"; sourceTree = "<group>"; };
 		BE4B76C0248974530018E97F /* AppleMusicRequestFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleMusicRequestFactory.swift; sourceTree = "<group>"; };
 		BE4B76C2248980750018E97F /* AuthorizationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationManager.swift; sourceTree = "<group>"; };
+		BE5BC20A2492BF57004B29D1 /* SpotifyConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotifyConstants.swift; sourceTree = "<group>"; };
 		BE82E30124783B7B00C26FA9 /* TrOver.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TrOver.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE82E30424783B7B00C26FA9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BE82E30624783B7B00C26FA9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -113,8 +119,17 @@
 			isa = PBXGroup;
 			children = (
 				BE4B76C0248974530018E97F /* AppleMusicRequestFactory.swift */,
+				BE3056C0248D54FB00AF45B7 /* JSONKeys.swift */,
 			);
 			path = Utility;
+			sourceTree = "<group>";
+		};
+		BE5BC20C2492BF5E004B29D1 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				BE5BC20A2492BF57004B29D1 /* SpotifyConstants.swift */,
+			);
+			path = Constants;
 			sourceTree = "<group>";
 		};
 		BE82E2F824783B7B00C26FA9 = {
@@ -143,6 +158,7 @@
 				BE82E30424783B7B00C26FA9 /* AppDelegate.swift */,
 				BE82E30624783B7B00C26FA9 /* SceneDelegate.swift */,
 				BE82E30824783B7B00C26FA9 /* HomeController.swift */,
+				BE3056C2248D593C00AF45B7 /* AuthViewController.swift */,
 				BE82E30A24783B7B00C26FA9 /* Main.storyboard */,
 				BE15C9C5248827BB00D5B46C /* Services */,
 				BEB65E53247AF6810093BEC8 /* Extensions */,
@@ -151,6 +167,7 @@
 				BE82E31524783B7D00C26FA9 /* Info.plist */,
 				BE82E30D24783B7B00C26FA9 /* TrOver.xcdatamodeld */,
 				BE3E5A4B2479B83F00AC9A16 /* Fonts */,
+				BE5BC20C2492BF5E004B29D1 /* Constants */,
 			);
 			path = TrOver;
 			sourceTree = "<group>";
@@ -249,6 +266,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BE15C9CC2488342800D5B46C /* MediaItem.swift in Sources */,
+				BE3056C1248D54FB00AF45B7 /* JSONKeys.swift in Sources */,
 				BE15C9C7248827FA00D5B46C /* NetworkService.swift in Sources */,
 				BE82E30924783B7B00C26FA9 /* HomeController.swift in Sources */,
 				BE82E30F24783B7B00C26FA9 /* TrOver.xcdatamodeld in Sources */,
@@ -262,7 +280,9 @@
 				BE15C9D224883C9E00D5B46C /* Artwork.swift in Sources */,
 				BE15C9CE248836EF00D5B46C /* Track.swift in Sources */,
 				BE15C9D024883C2200D5B46C /* SerializationError.swift in Sources */,
+				BE5BC20B2492BF57004B29D1 /* SpotifyConstants.swift in Sources */,
 				BE4B76C1248974530018E97F /* AppleMusicRequestFactory.swift in Sources */,
+				BE3056C3248D593C00AF45B7 /* AuthViewController.swift in Sources */,
 				BEE06552247A82CA00902F19 /* CardView.swift in Sources */,
 				BE82E30724783B7B00C26FA9 /* SceneDelegate.swift in Sources */,
 			);

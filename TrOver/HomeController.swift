@@ -19,19 +19,19 @@ class HomeController: UIViewController {
     let appleMusicManager = AppleMusicManager()
     
     /// The instance of `MediaLibraryManager` which is used for adding items to the application's playlist.
-    var mediaLibraryManager: MediaLibraryManager!
+//    var mediaLibraryManager: MediaLibraryManager!
     
     /// A `DispatchQueue` used for synchornizing the setting of `mediaItems` to avoid threading issues with various `UITableView` delegate callbacks.
     var setterQueue = DispatchQueue(label: "MediaSearchTableViewController")
     
     /// The array of `MediaItem` objects that represents the list of search results.
-    var mediaItems = [[MediaItem]]() {
-        didSet {
-            DispatchQueue.main.async {
-                self.tableView.reloadData()
-            }
-        }
-    }
+//    var mediaItems = [[MediaItem]]() {
+//        didSet {
+//            DispatchQueue.main.async {
+//                self.tableView.reloadData()
+//            }
+//        }
+//    }
     
     let topStackView = TopNavigationStackView()
     let cardsDeckView = UIView()
