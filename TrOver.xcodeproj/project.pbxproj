@@ -21,6 +21,7 @@
 		BE4B76C1248974530018E97F /* AppleMusicRequestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE4B76C0248974530018E97F /* AppleMusicRequestFactory.swift */; };
 		BE4B76C3248980750018E97F /* AuthorizationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE4B76C2248980750018E97F /* AuthorizationManager.swift */; };
 		BE5BC20B2492BF57004B29D1 /* SpotifyConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5BC20A2492BF57004B29D1 /* SpotifyConstants.swift */; };
+		BE5BC20E2492C30E004B29D1 /* SpotifyiOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE5BC20D2492C30E004B29D1 /* SpotifyiOS.framework */; };
 		BE82E30524783B7B00C26FA9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE82E30424783B7B00C26FA9 /* AppDelegate.swift */; };
 		BE82E30724783B7B00C26FA9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE82E30624783B7B00C26FA9 /* SceneDelegate.swift */; };
 		BE82E30924783B7B00C26FA9 /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE82E30824783B7B00C26FA9 /* HomeController.swift */; };
@@ -50,6 +51,8 @@
 		BE4B76C0248974530018E97F /* AppleMusicRequestFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleMusicRequestFactory.swift; sourceTree = "<group>"; };
 		BE4B76C2248980750018E97F /* AuthorizationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationManager.swift; sourceTree = "<group>"; };
 		BE5BC20A2492BF57004B29D1 /* SpotifyConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotifyConstants.swift; sourceTree = "<group>"; };
+		BE5BC20D2492C30E004B29D1 /* SpotifyiOS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SpotifyiOS.framework; sourceTree = "<group>"; };
+		BE5BC20F2492C915004B29D1 /* Trackovery.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Trackovery.h; sourceTree = "<group>"; };
 		BE82E30124783B7B00C26FA9 /* TrOver.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TrOver.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE82E30424783B7B00C26FA9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BE82E30624783B7B00C26FA9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -71,6 +74,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BE5BC20E2492C30E004B29D1 /* SpotifyiOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -137,6 +141,7 @@
 			children = (
 				BE82E30324783B7B00C26FA9 /* TrOver */,
 				BE82E30224783B7B00C26FA9 /* Products */,
+				BE5BC20D2492C30E004B29D1 /* SpotifyiOS.framework */,
 			);
 			sourceTree = "<group>";
 		};
@@ -165,6 +170,7 @@
 				BE82E31024783B7D00C26FA9 /* Assets.xcassets */,
 				BE82E31224783B7D00C26FA9 /* LaunchScreen.storyboard */,
 				BE82E31524783B7D00C26FA9 /* Info.plist */,
+				BE5BC20F2492C915004B29D1 /* Trackovery.h */,
 				BE82E30D24783B7B00C26FA9 /* TrOver.xcdatamodeld */,
 				BE3E5A4B2479B83F00AC9A16 /* Fonts */,
 				BE5BC20C2492BF5E004B29D1 /* Constants */,
@@ -430,13 +436,19 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = VGASMDNUX4;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = TrOver/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = valentinindigo.TrOver;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = /Users/bochkarovvalentyn/Documents/Trackovery/TrOver/TrOver/Trackovery.h;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -448,13 +460,19 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = VGASMDNUX4;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = TrOver/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = valentinindigo.TrOver;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = /Users/bochkarovvalentyn/Documents/Trackovery/TrOver/TrOver/Trackovery.h;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

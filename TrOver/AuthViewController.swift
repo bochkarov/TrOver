@@ -10,23 +10,15 @@ import UIKit
 import StoreKit
 
 class AuthViewController: UIViewController {
-    /// The instance of `SKCloudServiceController` that will be used for querying the available `SKCloudServiceCapability` and Storefront Identifier.
-    let cloudServiceController = SKCloudServiceController()
+    let SpotifyClientID = SpotifyConstants.CLIENT_ID
+    let SpotifyRedirectURL = URL(string: SpotifyConstants.REDIRECT_URI)!
+
+    lazy var configuration = SPTConfiguration(
+      clientID: SpotifyClientID,
+      redirectURL: SpotifyRedirectURL
+    )
     
-    /// The instance of `AppleMusicManager` that will be used for querying storefront information and user token.
-    var appleMusicManager: AppleMusicManager!
-    
-    /// The instance of `AuthorizationManager` used for querying and requesting authorization status.
-    var authorizationManager: AuthorizationManager!
-    
-    /// The current set of `SKCloudServiceCapability` that the sample can currently use.
-    var cloudServiceCapabilities = SKCloudServiceCapability()
-    
-    /// The current set of two letter country code associated with the currently authenticated iTunes Store account.
-    var cloudServiceStorefrontCountryCode = ""
-    
-    /// The Music User Token associated with the currently signed in iTunes Store account.
-    var userToken = ""
+
     
     let authButton = UIButton(type: .system)
 
@@ -37,12 +29,20 @@ class AuthViewController: UIViewController {
         authButton.addTarget(self, action: #selector(authButtonPressed), for: .touchUpInside)
     }
     
+    func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey : Any] = [:]) -> Bool {
+      let parameters = appRemote.authorizationParameters(from: url);
+
+            if let access_token = parameters?[SPTAppRemoteAccessTokenKey] {
+                appRemote.connectionParameters.accessToken = access_token
+                self.accessToken = access_token
+            } else if let error_description = parameters?[SPTAppRemoteErrorDescriptionKey] {
+                // Show the error
+            }
+      return true
+    }
+    
     @objc func authButtonPressed() {
-        requestUserToken()
-        print(userToken)
-//     authorizationManager.requestCloudServiceAuthorization()
-//
-//     authorizationManager.requestMediaLibraryAuthorization()
+
     }
 }
 
@@ -68,45 +68,4 @@ extension AuthViewController {
           ])
     }
 }
-extension AuthViewController {
-func requestUserToken() {
-    let developerToken = "eyJhbGciOiJFUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IjZHWU1KSzc0RzMifQ.eyJpc3MiOiJWR0FTTUROVVg0IiwiaWF0IjoxNTkxNTQ4MDk0LCJleHAiOjE1OTE1OTEyOTR9.EVwV1J_38tS_ZeTKTpgCgpoIgEG1Jt4d2G45PnTGOXAaV-xulsRXvMX26oSphnCvqix0_swQx-ufPWGDFuVaTw"
 
-    
-    if SKCloudServiceController.authorizationStatus() == .authorized {
-        
-        let completionHandler: (String?, Error?) -> Void = { [weak self] (token, error) in
-            guard error == nil else {
-                print("An error occurred when requesting user token: \(error!.localizedDescription)")
-                return
-            }
-            
-            guard let token = token else {
-                print("Unexpected value from SKCloudServiceController for user token.")
-                return
-            }
-            
-            self?.userToken = token
-            print(token)
-            
-            /// Store the Music User Token for future use in your application.
-            let userDefaults = UserDefaults.standard
-            
-            userDefaults.set(token, forKey: AuthorizationManager.userTokenUserDefaultsKey)
-            userDefaults.synchronize()
-            
-//            if self?.cloudServiceStorefrontCountryCode == "" {
-//                self?.requestStorefrontCountryCode()
-//            }
-            
-            NotificationCenter.default.post(name: AuthorizationManager.cloudServiceDidUpdateNotification, object: nil)
-        }
-        
-        if #available(iOS 11.0, *) {
-            cloudServiceController.requestUserToken(forDeveloperToken: developerToken, completionHandler: completionHandler)
-        } else {
-            cloudServiceController.requestPersonalizationToken(forClientToken: developerToken, withCompletionHandler: completionHandler)
-        }
-    }
-}
-}

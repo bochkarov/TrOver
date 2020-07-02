@@ -13,5 +13,4 @@ struct SpotifyConstants {
     static let SESSION_KEY = "spotifySessionKey"
     static let REDIRECT_URI = "Trackovery://returnAfterLogin"
     static let SCOPE = "user-read-email"
-    
 }
